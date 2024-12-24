@@ -48,7 +48,6 @@ async def start_command(client, message: Message):
             ]
         )
     )
-)
 
 @app.on_message(
 filters.command("banall") 
