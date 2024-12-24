@@ -1,7 +1,6 @@
 import os
 import logging
 from os import getenv
-import app
 from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import ChatAdminRequired
