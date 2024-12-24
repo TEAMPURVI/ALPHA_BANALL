@@ -1,6 +1,7 @@
 import os
 import logging
 from os import getenv
+from RAUSHAN import app
 from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import ChatAdminRequired
@@ -26,21 +27,33 @@ app = Client(
 )
 
 @app.on_message(
-filters.command("start")
-& filters.private            
+    filters.command("start")
+    & filters.private
 )
 async def start_command(client, message: Message):
-  await message.reply_photo(
-                            photo = f"https://telegra.ph/file/e484dc030e63494789be5.jpg",
-                            caption = f"ʜᴇʏ, ᴛʜɪs ɪs ᴀ sɪᴍᴘʟᴇ ʙᴀɴ ᴀʟʟ ʙᴏᴛ ᴡʜɪᴄʜ ɪs ʙᴀsᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ʟɪʙʀᴀʀʏ ᴛᴏ ʙᴀɴ ᴏʀ ᴅᴇsᴛʀᴏʏ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ɪɴ ᴀ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ ғᴇᴇʟ ᴛʜᴇ ᴘᴏᴡᴇʀ ᴏғ @ll_ALPHA_BABY_lll!\n\nᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ ᴀʙɪʟɪᴛʏ ɢɪᴠᴇ ᴍᴇ ғᴜʟʟ ᴘᴏᴡᴇʀs\n\nᴛʏᴘᴇ /ʙᴀɴᴀʟʟ ᴛᴏ ꜱᴇᴇ ᴍᴀɢɪᴄ ɪɴ ɢʀᴏᴜᴘ.",
-  reply_markup=InlineKeyboardMarkup(
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/e484dc030e63494789be5.jpg",
+        caption=f"ʜᴇʏ, ᴛʜɪs ɪs ᴀ sɪᴍᴘʟᴇ ʙᴀɴ ᴀʟʟ ʙᴏᴛ ᴡʜɪᴄʜ ɪs ʙᴀsᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ʟɪʙʀᴀʀʏ ᴛᴏ ʙᴀɴ ᴏʀ ᴅᴇsᴛʀᴏʏ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ɪɴ ᴀ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ ғᴇᴇʟ ᴛʜᴇ ᴘᴏᴡᴇʀ ᴏғ @ll_ALPHA_BABY_lll!\n\nᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ ᴀʙɪʟɪᴛʏ ɢɪᴠᴇ ᴍᴇ ғᴜʟʟ ᴘᴏᴡᴇʀs\n\nᴛʏᴘᴇ /ʙᴀɴᴀʟʟ ᴛᴏ ꜱᴇᴇ ᴍᴀɢɪᴄ ɪɴ ɢʀᴏᴜᴘ.",
+        reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "ᴏᴡɴᴇʀ ᴀʟᴘʜᴀ", url=f"https://t.me/{OWNER}")
-                ]       
-           ]
-      )
+                        "⚜️ Aᴅᴅ ᴍᴇ Bᴀʙʏ ⚜️", url=f"https://t.me/{app.username}?startgroup=true"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🔸 ❍ᴡɴᴇʀ🔸", url="http://t.me/ll_ALPHA_BABY_lll"
+                    ]
+                ],
+                [
+                    InlineKeyboardButton(
+                        "▫️ 𝗨ᴘᴅᴀᴛᴇs ▫️", url="t.me/purvi_updates"
+                    ]
+                ]
+            ]
+        )
+    )
 )
 
 @app.on_message(
